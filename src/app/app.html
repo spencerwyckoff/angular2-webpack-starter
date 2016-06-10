@@ -1,0 +1,26 @@
+<md-content>
+  <md-toolbar color="primary">
+      <span>{{ name }}</span>
+      <span class="fill"></span>
+      <button md-button router-active [routerLink]=" ['Index'] ">
+        Index
+      </button>
+      <button md-button router-active [routerLink]=" ['Home'] ">
+        Home
+      </button>
+      <button md-button router-active [routerLink]=" ['About'] ">
+        About
+      </button>
+  </md-toolbar>
+
+  <md-progress-bar mode="indeterminate" color="primary" *ngIf="loading"></md-progress-bar>
+
+  <router-outlet></router-outlet>
+
+  <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
+
+  <footer>
+    <img [src]="angularclassLogo" width="6%">
+    <span id="footerText">Clash of Clans and its logos are trademarks of Supercell. This web site is not affiliated with, endorsed, sponsored, or specifically approved by Supercell. Supercell is not responsible for the operation or content of this site. For more information about Supercell, please visit their website at <a [href]="url">Supercell</a></span>
+  </footer>
+</md-content>
